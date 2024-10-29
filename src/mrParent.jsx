@@ -1,14 +1,16 @@
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 const Parent = ({ children }) => {
+  const home = useRouter();
   return (
     <div className="hello">
       <div className="footer">
-        <Link href={`http://localhost:3000/`}>
-          <button className="btn">Home</button>
-        </Link>
-        <Link href={`http://localhost:3000/post`}>
-          <button className="btn">addPost</button>
-        </Link>
+        <button onClick={() => home.push(`/`)} className="btn">
+          Home
+        </button>
+        <button onClick={() => home.push(`/post`)} className="btn">
+          addPost
+        </button>
       </div>
       <div>{children}</div>
     </div>
