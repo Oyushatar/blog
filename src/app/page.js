@@ -37,6 +37,7 @@ const Page = () => {
           flexDirection: "column",
           alignItems: "center",
           width: "100vw",
+          flexWrap: "wrap",
         }}
       >
         <h1 className="header">All Blog Post</h1>
